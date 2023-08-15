@@ -22,15 +22,27 @@
         <ul>
           <li>
             <label for="username">Your name</label>
-            <input type="text" name="user-name" id="username" />
+            <input
+              type="text"
+              name="user-name"
+              id="username"
+              required
+              placeholder="Enter name"
+            />
           </li>
           <li>
             <label for="useremail">Your email address</label>
-            <input type="email" name="user-email" id="useremail" />
+            <input type="email" name="user-email" id="useremail" required />
           </li>
           <li>
             <label for="userpassword">Your password</label>
-            <input type="password" name="user-password" id="userpassword" />
+            <input
+              type="password"
+              name="user-password"
+              id="userpassword"
+              required
+              minlength="7"
+            />
           </li>
         </ul>
       </section>
@@ -41,11 +53,26 @@
         <ul>
           <li>
             <label for="userage">Your age</label>
-            <input type="number" step="1" name="user-age" id="userage" />
+            <input
+              type="number"
+              step="1"
+              name="user-age"
+              id="userage"
+              required
+              min="18"
+              max="100"
+            />
           </li>
           <li>
             <label for="birthdate">Your birthdate</label>
-            <input type="date" name="user-birthdate" id="birthdate" />
+            <input
+              type="date"
+              name="user-birthdate"
+              id="birthdate"
+              required
+              min="1921-01-01"
+              max="2003-01-01"
+            />
           </li>
           <li>
             <label for="favorite-color">Your Favorite color?</label>
@@ -60,7 +87,12 @@
 
       <section>
         <label for="usermessage">Your message</label>
-        <textarea name="user-message" id="usermessage"></textarea>
+        <textarea
+          name="user-message"
+          id="usermessage"
+          required
+          rows="8"
+        ></textarea>
       </section>
 
       <section>
@@ -72,15 +104,28 @@
               name="verify"
               id="verify-text-message"
               value="text-message"
+              required
             />
             <label for="verify-text-message">Via text message (SMS)</label>
           </li>
           <li class="form-control-inline">
-            <input type="radio" name="verify" id="verify-phone" value="phone" />
+            <input
+              type="radio"
+              name="verify"
+              id="verify-phone"
+              value="phone"
+              required
+            />
             <label for="verify-phone">Via a phone call</label>
           </li>
           <li class="form-control-inline">
-            <input type="radio" name="verify" id="verify-email" value="email" />
+            <input
+              type="radio"
+              name="verify"
+              id="verify-email"
+              value="email"
+              required
+            />
             <label for="verify-email">Via an email</label>
           </li>
         </ul>
@@ -121,7 +166,7 @@
       </section>
 
       <section>
-        <button>Submit</button>
+        <button type="submit">Submit</button>
       </section>
     </form>
   </body>
